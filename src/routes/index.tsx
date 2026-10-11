@@ -30,10 +30,6 @@ const FAQ_CONTACT = "[Defina o canal: e-mail ou WhatsApp de suporte.]";
 const FAQ_ACCESS = "[Defina: vitalício ou prazo.]";
 const FAQ_MENTOR_ACCESS = "[Defina: suporte por e-mail/WhatsApp ou não.]";
 
-const testimonial = (kind: string) => ({
-  name: "[Nome]",
-  text: kind,
-});
 /* ====================================== */
 
 const steps = [
@@ -101,11 +97,12 @@ function Cta({ children }: { children: React.ReactNode }) {
   );
 }
 
-function Testimonials({ title, items }: { title?: string; items: { name: string; text: string }[] }) {
+function Testimonials({ title, description, items }: { title?: string; description?: string; items: { name: string; text: string }[] }) {
   return (
     <section className="mx-auto max-w-6xl px-6 py-14">
       {title && <h2 className="text-3xl">{title}</h2>}
-      <div className={`grid gap-4 ${items.length > 1 ? "md:grid-cols-3" : ""} ${title ? "mt-8" : ""}`}>
+      {description && <p className="mt-4 max-w-3xl text-muted-foreground">{description}</p>}
+      <div className={`grid gap-4 ${items.length > 1 ? "md:grid-cols-3" : ""} ${title || description ? "mt-8" : ""}`}>
         {items.map((t, i) => (
           <blockquote key={i} className="rounded-2xl border bg-card p-6">
             <p className="text-muted-foreground">{t.text}</p>
@@ -190,16 +187,25 @@ function Index() {
         </div>
       </section>
 
-      {/* 5 — Depoimentos */}
+      {/* 5 — Exemplos ilustrativos do método */}
       <Testimonials
-        title="Quem já aplicou o Guia Não Puxa Mais teve esse resultado:"
+        title="Veja as etapas do método na prática"
+        description="Exemplos fictícios para ilustrar o protocolo. Estes textos não são depoimentos de clientes."
         items={[
-          testimonial("[Nome] fez [ação do protocolo] e conseguiu [resultado]"),
-          testimonial("[Nome] fez [ação do protocolo] e conseguiu [resultado]"),
-          testimonial("[Nome] fez [ação do protocolo] e conseguiu [resultado]"),
+          {
+            name: "Exemplo ilustrativo · Fase 1: Jogo do Nome",
+            text: "Comecei com o Jogo do Nome dentro de casa, por poucos minutos. Gostei de praticar num lugar mais calmo antes de tentar na rua. Depois de alguns dias, meu cão já prestava mais atenção quando eu chamava.",
+          },
+          {
+            name: "Exemplo ilustrativo · Fase 2: Princípio da Árvore",
+            text: "No começo eu ficava sem saber o que fazer quando a guia esticava. Com o Princípio da Árvore, aprendi a parar e voltar a andar quando ela afrouxava. As primeiras caminhadas tiveram bastante pausa, mas aos poucos meu cão começou a perceber o que fazia o passeio continuar.",
+          },
+          {
+            name: "Exemplo ilustrativo · Fase 3: Jogo do Engajamento",
+            text: "Quando apareciam outros cães, eu tentava passar perto e acabava com a guia tensa. Aprendi a manter distância, chamar meu cão antes do puxão e recompensar quando ele olhava para mim. Ainda estamos treinando, mas agora sei como agir quando ele se distrai.",
+          },
         ]}
       />
-
       {/* 6 — Agitação */}
       <section className="mx-auto max-w-3xl space-y-5 px-6 py-14 text-lg">
         <p>Você perde um pouco de paz toda vez que sai de casa já esperando o puxão.</p>
@@ -207,9 +213,6 @@ function Index() {
         <p>Isso continua acontecendo porque pode ser que você já tenha trocado de coleira, tentado dar um tranco na guia ou assistido vídeos soltos sem saber qual seguir.</p>
         <p className="font-semibold">E é um passo a passo claro, do início ao fim, que você vai encontrar no Guia Não Puxa Mais.</p>
       </section>
-
-      {/* 7 — Depoimento ligado à dor */}
-      <Testimonials items={[testimonial("[Nome] também vivia sendo arrastada(o) no passeio e, depois do Guia Não Puxa Mais, conseguiu [resultado específico ligado a essa dor].")]} />
 
       {/* 8 — Entregáveis detalhados + 1º CTA */}
       <section className="bg-secondary/50 py-20">
@@ -230,9 +233,6 @@ function Index() {
           </div>
         </div>
       </section>
-
-      {/* 9 — Depoimento ligado a um bônus */}
-      <Testimonials items={[testimonial("[Nome] usou o [App/Planilha de Progresso ou Os 7 Erros] e disse que foi o que fez ela(e) [resultado ligado a esse bônus].")]} />
 
       {/* 10 — Para quem é */}
       <section className="mx-auto max-w-3xl px-6 pb-14">
