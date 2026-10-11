@@ -24,7 +24,7 @@ const URGENCY: string | null = null; // ex.: "O Bônus 4 só vem junto até [dat
 
 const MENTOR = {
   name: "Julio Pimentel",
-  bio: "Sou sargento da Polícia Militar de Santa Catarina e líder do Grupamento de Policiamento com Cães da minha cidade. Desde que ingressei na corporação, em 2006, busco aprofundar meus conhecimentos em adestramento e comportamento canino por meio de cursos, seminários e estudos. Em 2021, fui convidado a liderar a implantação do policiamento com cães na unidade onde trabalho. Também atuei com treinamento e orientação de tutores em domicílio. Reuni neste guia aprendizados dessa trajetória para ajudar você a compreender melhor as necessidades do seu cão e construir uma convivência mais equilibrada e harmoniosa.",
+  bio: "Sou sargento da Polícia Militar de Santa Catarina e sirvo no Grupamento de Policiamento com Cães da minha cidade. Desde que ingressei na corporação, em 2006, venho aprofundando meus conhecimentos em adestramento e comportamento canino por meio de cursos, seminários e estudos. Em 2021, fui convidado a integrar o grupamento, quando a unidade iniciou o policiamento com cães. Também atuei com treinamento de cães e orientação de tutores em domicílio. Reuni neste guia aprendizados dessa trajetória para ajudar você a compreender melhor as necessidades do seu cão e construir uma convivência mais equilibrada e harmoniosa.",
 };
 
 const FAQ_CONTACT = "[Defina o canal: e-mail ou WhatsApp de suporte.]";
