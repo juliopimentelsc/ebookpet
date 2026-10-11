@@ -193,15 +193,15 @@ function Index() {
         description="Exemplos fictícios para ilustrar o protocolo. Estes textos não são depoimentos de clientes."
         items={[
           {
-            name: "Exemplo ilustrativo · Fase 1: Jogo do Nome",
+            name: "Ana · personagem fictícia · Fase 1: Jogo do Nome",
             text: "Comecei com o Jogo do Nome dentro de casa, por poucos minutos. Gostei de praticar num lugar mais calmo antes de tentar na rua. Depois de alguns dias, meu cão já prestava mais atenção quando eu chamava.",
           },
           {
-            name: "Exemplo ilustrativo · Fase 2: Princípio da Árvore",
+            name: "Rafael · personagem fictício · Fase 2: Princípio da Árvore",
             text: "No começo eu ficava sem saber o que fazer quando a guia esticava. Com o Princípio da Árvore, aprendi a parar e voltar a andar quando ela afrouxava. As primeiras caminhadas tiveram bastante pausa, mas aos poucos meu cão começou a perceber o que fazia o passeio continuar.",
           },
           {
-            name: "Exemplo ilustrativo · Fase 3: Jogo do Engajamento",
+            name: "Camila · personagem fictícia · Fase 3: Jogo do Engajamento",
             text: "Quando apareciam outros cães, eu tentava passar perto e acabava com a guia tensa. Aprendi a manter distância, chamar meu cão antes do puxão e recompensar quando ele olhava para mim. Ainda estamos treinando, mas agora sei como agir quando ele se distrai.",
           },
         ]}
