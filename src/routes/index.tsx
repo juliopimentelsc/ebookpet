@@ -17,7 +17,7 @@ export const Route = createFileRoute("/")({
 });
 
 /* ===== CONFIGURAÇÃO (edite aqui) ===== */
-const CHECKOUT_URL = "#comprar"; // TODO: link do checkout
+const CHECKOUT_URL = "https://pay.kiwify.com.br/hOeQL8a";
 const PRICE_FROM = "R$ 296";
 const PRICE_TO = "R$ 37";
 const URGENCY: string | null = null; // ex.: "O Bônus 4 só vem junto até [data/hora]."
