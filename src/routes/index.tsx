@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
 
 /* ===== CONFIGURAÇÃO (edite aqui) ===== */
 const CHECKOUT_URL = "https://pay.kiwify.com.br/hOeQL8a";
-const PRICE_FROM = "R$ 296";
+const PRICE_FROM = "R$ 239";
 const PRICE_TO = "R$ 37";
 const URGENCY: string | null = null; // ex.: "O Bônus 4 só vem junto até [data/hora]."
 
@@ -41,7 +41,6 @@ const steps = [
 
 const summary = [
   "Protocolo de 14 Dias em PDF, com a tarefa de cada dia",
-  "Vídeos curtos demonstrando cada exercício",
   "Guia dos Primeiros 3 Dias",
   "Treino Expresso de 5 Minutos",
   "Os 7 Erros Que Fazem o Cão Puxar Ainda Mais",
@@ -50,7 +49,6 @@ const summary = [
 
 const deliverables = [
   { tag: "Entregável 01", title: "Protocolo de 14 Dias (PDF)", text: "A tarefa de cada dia, na ordem certa. Você abre, lê e aplica no passeio do mesmo dia." },
-  { tag: "Entregável 02", title: "Vídeos dos exercícios", text: "Vídeos curtos mostrando cada exercício na prática, para você não ficar na dúvida de como fazer." },
   { tag: "Bônus 1", title: "Guia dos Primeiros 3 Dias", q: "Mas eu não sei nem por onde começar?", text: "Aqui você vê o que fazer no exato momento em que sai de casa." },
   { tag: "Bônus 2", title: "Treino Expresso de 5 Minutos", q: "Mas eu não tenho tempo pra treinar?", text: "Versão relâmpago do protocolo para quem só tem o tempo do café da manhã." },
   { tag: "Bônus 3", title: "Os 7 Erros Que Fazem o Cão Puxar Ainda Mais", q: "Mas e se eu fizer errado e piorar?", text: "Você sabe de antemão o que nunca fazer na guia." },
@@ -66,7 +64,6 @@ const forWho = [
 
 const anchor = [
   ["Protocolo de 14 Dias (PDF)", "R$ 97"],
-  ["Vídeos dos exercícios", "R$ 57"],
   ["Bônus 1, Guia dos Primeiros 3 Dias", "R$ 27"],
   ["Bônus 2, Treino Expresso de 5 Minutos", "R$ 27"],
   ["Bônus 3, Os 7 Erros", "R$ 27"],
@@ -75,7 +72,7 @@ const anchor = [
 
 const accessSteps = [
   ["Faça sua compra", "Assim que finalizar, você recebe o acesso no seu e-mail."],
-  ["Acesse tudo", "Protocolo, vídeos e bônus liberados de uma vez."],
+  ["Acesse tudo", "Protocolo e bônus liberados de uma vez."],
   ["Tudo pronto", "Agora é só aplicar o Guia Não Puxa Mais no próximo passeio."],
 ];
 
@@ -210,7 +207,7 @@ function Index() {
       <section className="mx-auto max-w-3xl space-y-5 px-6 py-14 text-lg">
         <p>Você perde um pouco de paz toda vez que sai de casa já esperando o puxão.</p>
         <p>Eu sei que você cansou de ser arrastado e cansou de ver os vizinhos olhando enquanto seu cão faz o que quer.</p>
-        <p>Isso continua acontecendo porque pode ser que você já tenha trocado de coleira, tentado dar um tranco na guia ou assistido vídeos soltos sem saber qual seguir.</p>
+        <p>Isso continua acontecendo porque talvez você já tenha trocado de coleira, tentado dar um tranco na guia ou seguido orientações diferentes sem saber qual colocar em prática.</p>
         <p className="font-semibold">E é um passo a passo claro, do início ao fim, que você vai encontrar no Guia Não Puxa Mais.</p>
       </section>
 
@@ -229,7 +226,7 @@ function Index() {
             ))}
           </div>
           <div className="mt-10 text-center">
-            <Cta>Quero acesso ao protocolo, aos vídeos e aos 4 bônus</Cta>
+            <Cta>Quero acesso ao protocolo e aos 4 bônus</Cta>
           </div>
         </div>
       </section>
