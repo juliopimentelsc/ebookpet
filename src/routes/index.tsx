@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import hero from "@/assets/hero-pet.jpg";
+import mentorPhoto from "@/assets/julio-pimentel-mentor.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -302,10 +303,19 @@ function Index() {
 
       {/* 15 — Mentor */}
       <section className="bg-secondary/50 py-16">
-        <div className="mx-auto max-w-3xl px-6">
-          <h2 className="text-3xl">Conheça seu mentor</h2>
-          <h3 className="mt-4 text-xl">{MENTOR.name}</h3>
-          <p className="mt-2 text-muted-foreground">{MENTOR.bio}</p>
+        <div className="mx-auto grid max-w-5xl items-center gap-8 px-6 md:grid-cols-2 md:gap-12">
+          <img
+            src={mentorPhoto}
+            alt="Julio Pimentel ao lado de um cão do Grupamento de Policiamento com Cães"
+            width={768}
+            height={576}
+            className="aspect-[4/3] w-full rounded-2xl object-cover shadow-xl"
+          />
+          <div>
+            <h2 className="text-3xl">Conheça seu mentor</h2>
+            <h3 className="mt-4 text-xl">{MENTOR.name}</h3>
+            <p className="mt-2 text-muted-foreground">{MENTOR.bio}</p>
+          </div>
         </div>
       </section>
 
